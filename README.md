@@ -12,9 +12,13 @@ git clone https://github.com/babim/docker-ubuntu-vnc-desktop.git
 docker build --rm -t babim/ubuntu-novnc docker-ubuntu-vnc-desktop
 ```
 
-Run
+Run without password
 ```
 docker run -i -t -p 6080:6080 babim/ubuntu-novnc
+```
+Run with password
+```
+docker run -i -t -p 6080:6080 -e PASS=ubuntu babim/ubuntu-novnc
 ```
 
 Browse http://127.0.0.1:6080/vnc.html
