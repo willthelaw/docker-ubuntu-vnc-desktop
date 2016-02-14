@@ -25,13 +25,6 @@ Browse http://127.0.0.1:6080/vnc.html
 
 <img src="https://raw.github.com/babim/docker-ubuntu-vnc-desktop/master/screenshots/lxde.png" width=400/>
 
-
-Troubleshooting
-==================
-
-1. boot2docker connection issue, https://github.com/babim/docker-ubuntu-vnc-desktop/issues/2
-
-
 License
 ==================
 
