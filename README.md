@@ -3,20 +3,36 @@ docker-ubuntu-vnc-desktop
 
 From Docker Index
 ```
-docker pull dorowu/ubuntu-lxqt-vnc
+docker pull babim/ubuntu-novnc
 ```
 
 Build yourself
 ```
-git clone -b lxqt https://github.com/fcwu/docker-ubuntu-vnc-desktop.git
-docker build --rm -t dorowu/ubuntu-lxqt-vnc docker-ubuntu-vnc-desktop
+git clone https://github.com/babim/docker-ubuntu-vnc-desktop.git
+docker build --rm -t babim/ubuntu-novnc docker-ubuntu-vnc-desktop
 ```
 
-Run
+Run without password
 ```
-docker run -i -t -p 6080:6080 dorowu/ubuntu-lxqt-vnc
+docker run -i -t -p 6080:6080 babim/ubuntu-novnc
+```
+Run with password
+```
+docker run -i -t -p 6080:6080 -e PASS=ubuntu babim/ubuntu-novnc
 ```
 
 Browse http://127.0.0.1:6080/vnc.html
 
-<img src="https://raw.github.com/fcwu/docker-ubuntu-vnc-desktop/lxqt/screenshots/lxqt.png" width=400/>
+<img src="https://raw.github.com/babim/docker-ubuntu-vnc-desktop/master/screenshots/lxde.png" width=400/>
+
+
+Troubleshooting
+==================
+
+1. boot2docker connection issue, https://github.com/babim/docker-ubuntu-vnc-desktop/issues/2
+
+
+License
+==================
+
+desktop-mirror is under the Apache 2.0 license. See the LICENSE file for details.
