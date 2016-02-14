@@ -1,4 +1,4 @@
-FROM babim/ubuntubase
+FROM babim/ubuntubase:ssh
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
