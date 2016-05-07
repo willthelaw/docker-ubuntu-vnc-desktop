@@ -12,7 +12,7 @@ RUN apt-get update \
         libreoffice firefox \
         fonts-wqy-microhei \
         nginx \
-        python-pip python-dev build-essential \
+        python-pip python-dev build-essential python-setuptools \
         mesa-utils libgl1-mesa-dri \
     && apt-get autoclean \
     && apt-get autoremove \
