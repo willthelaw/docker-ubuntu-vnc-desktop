@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p /var/run/sshd
+
 # create an ubuntu user
 # PASS=`pwgen -c -n -1 10`
 PASS=ubuntu
@@ -11,4 +13,4 @@ sudo -u ubuntu -i bash -c "mkdir -p /home/ubuntu/.config/pcmanfm/LXDE/ \
 
 cd /web && ./run.py > /var/log/web.log 2>&1 &
 nginx -c /etc/nginx/nginx.conf
-exec /usr/bin/supervisord -n
+exec /bin/tini -- /usr/bin/supervisord -n
