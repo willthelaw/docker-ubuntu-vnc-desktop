@@ -21,6 +21,11 @@ RUN apt-get update \
 ADD web /web/
 RUN pip install -r /web/requirements.txt
 
+# tini for subreap                                   
+ENV TINI_VERSION v0.9.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
+RUN chmod +x /bin/tini
+
 ADD noVNC /noVNC/
 ADD nginx.conf /etc/nginx/sites-enabled/default
 ADD startup.sh /
