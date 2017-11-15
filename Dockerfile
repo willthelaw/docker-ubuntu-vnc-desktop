@@ -1,4 +1,5 @@
-FROM babim/ubuntubase
+FROM ubuntu:16.04
+#FROM babim/ubuntubase
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
