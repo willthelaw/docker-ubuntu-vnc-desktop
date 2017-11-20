@@ -10,7 +10,7 @@ RUN apt-get update \
         net-tools \
         lxde x11vnc xvfb \
         gtk2-engines-murrine ttf-ubuntu-font-family \
-        libreoffice firefox \
+        xterm firefox \
         fonts-wqy-microhei \
         nginx \
         python-pip python-dev build-essential python-setuptools \
@@ -32,7 +32,7 @@ ADD noVNC /noVNC/
 ADD nginx.conf /etc/nginx/sites-enabled/default
 ADD startup.sh /
 ADD supervisord.conf /etc/supervisor/conf.d/
-ADD doro-lxde-wallpapers /usr/share/doro-lxde-wallpapers/
+#ADD doro-lxde-wallpapers /usr/share/doro-lxde-wallpapers/
 
 EXPOSE 6080
 WORKDIR /root
