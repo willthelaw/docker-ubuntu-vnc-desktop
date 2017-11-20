@@ -15,7 +15,7 @@ RUN apt-get update \
         nginx \
         python-pip python-dev build-essential python-setuptools \
         mesa-utils libgl1-mesa-dri \
-    && apt-get -y --force-yes dist-upgrade
+    && apt-get -y --force-yes dist-upgrade \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
